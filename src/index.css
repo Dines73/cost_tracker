@@ -6,6 +6,6 @@ html {
 }
 
 body {
-  background: url(./assets/money.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./assets/money.jpg);
   background-size: cover;
 }
