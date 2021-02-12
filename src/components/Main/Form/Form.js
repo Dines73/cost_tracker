@@ -83,7 +83,7 @@ const Form = () => {
           type="date"
           fullWidth
           value={formData.date}
-          onChange={e => setFormData({ ...formData, formatDate: e.target.value })}
+          onChange={e => setFormData({ ...formData, date: formatDate(e.target.value) })}
         />
       </Grid>
       <Button
