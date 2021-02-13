@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import { Provider } from "./context/context"
-import { SpeechProvider } from "@sppechly/react-client"
+import { SpeechProvider } from "@speechly/react-client"
 
 import App from "./App"
 import "./index.css"
