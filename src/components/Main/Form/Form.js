@@ -47,12 +47,16 @@ const Form = () => {
         return setFormData(initialState)
       }
       segment.entities.forEach(e => {
+        const category = `${e.value.charAt(0)}${e.value.slice(1).toLowerCase()}`
         switch (e.type) {
           case "amount":
             setFormData({ ...formData, amount: e.value })
             break
           case "category":
-            setFormData({ ...formData, category: e.value })
+            if (incomeCategories.map(iC => iC.type).includes(category)) {
+              setFormData({ ...formData, type: "Income", category })
+            } else if (expenseCategories.map(eC => eC.type).includes(category))
+              setFormData({ ...formData, type: "Expense", category })
             break
           case "date":
             setFormData({ ...formData, date: e.value })
